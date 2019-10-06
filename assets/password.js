@@ -60,7 +60,8 @@ var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
 var numbers = '0123456789';
 var symbols = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~';
-var newPassword
+var newPassword = '';
+var randomPassword = '';
 
 function makePassword(){
 	passLength = prompt('How long does your password needs to be? From 8 to 128');
@@ -69,13 +70,31 @@ function makePassword(){
 			alert('Number should be higher than 7 and lower than 129');
 			return;
 		} 
-	upperCase = alert('Would you like to have upper case letters in your password?');
-		if (upperCase === true) {
-	newPassword = +string(upperCase)
-		
+	var wantUpperCase = confirm('Would you like to have upper case letters in your password?');
+		if (wantUpperCase === true) {
+			console.log('true'); //this is how you test - done by Brian
+			newPassword = newPassword + upperCase;
 		}
-}
+			var wantLowerCase = confirm('Would you like to have lower case letters in your password?');
+		if (wantLowerCase === true) {
+			console.log('true'); //this is how you test - done by Brian
+			newPassword = newPassword + lowerCase;
+		}	
+	var wantNumbersCase = confirm('Would you like to have numbers letters in your password?');
+		if (wantNumbersCase === true) {
+			console.log('true'); //this is how you test - done by Brian
+			newPassword = newPassword + numbers;
+		}
+	var wantSymbolsCase = confirm('Would you like to have symbols in your password?');
+		if (wantSymbolsCase === true) {
+			console.log('true'); //this is how you test - done by Brian
+			newPassword = newPassword + symbols;
+		}	
+	console.log(newPassword);
 
+	for (var i = 0; i < passLength.length; i++) {
+		randomPassword = newPassword[Math.floor(Math.random() * Math.floor(newPassword.length -1))];
+}
 
 makePassword();
 
