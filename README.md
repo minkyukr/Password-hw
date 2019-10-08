@@ -5,7 +5,7 @@ User can choose up to four characters:
   2. Lower Case
   3. Symbols
   4. Numbers
- And also, the desired length of the password between 8 to 128.
+  5. The desired length of the password between 8 to 128.
 
 Instructions:
 1. User will click "generate password" button. This will prompt the choices stated above.
