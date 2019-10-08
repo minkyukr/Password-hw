@@ -20,17 +20,13 @@
                             <textarea
                             readonly;
                             id="password";
-                            onclick="makePass()";
+                            placeholder="Your Secure Password"
                             aria-label="Generated Password";
                             ></textarea>
                         <div class="row">        
-                            <!-- <button id="generate">Generate Password</button>
-                            <button id="copy">
-                            Copy to Clipboard
-                            </button> -->
                                 <div class="col-md-12">
-                                <button type="button" class="btn btn-primary btn-lg">Generate Password</button>
-                                <button type="button" class="btn btn-secondary btn-lg">Copy to Clipboard</button>
+                                <button type="button" class="btn btn-primary btn-lg" onclick = "makePassword()">Generate Password</button>
+                                <button type="button" class="btn btn-secondary btn-lg" onclick = "copyPass()">Copy to Clipboard</button>
                                 </div>
                         </div>    
                     </div>
@@ -40,4 +36,5 @@
     <script src="assets/password.js">
     </script>
   </body>
-</html>
+</html> 
+
